@@ -97,24 +97,60 @@ $terms = get_terms( array(
 
       <div class="col-3">
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <span>Show all</span>
+          <a class="nav-link active" id="v-pills-all-tab" data-toggle="pill" href="#v-pills-all" role="tab" aria-controls="v-pills-all" aria-selected="true">
+              <?php _e('Show all', 'digitechsltd'); ?>
+            </a>
           <?php 
           $counter=0;
             foreach ($terms  as $term): 
             $counter++;
             ?>
-            <a class="nav-link <?= ($counter == 1)? 'active':''; ?>" id="v-pills-<?= $term->term_id; ?>-tab" data-toggle="pill" href="#v-pills-<?= $term->term_id; ?>" role="tab" aria-controls="v-pills-<?= $term->term_id; ?>" aria-selected="true"><?= $term->name; ?></a>
+            <a class="nav-link" id="v-pills-<?= $term->term_id; ?>-tab" data-toggle="pill" href="#v-pills-<?= $term->term_id; ?>" role="tab" aria-controls="v-pills-<?= $term->term_id; ?>" aria-selected="true">
+              <img src="<?= the_field('icon_term', 'services-tag' . '_' . $term->term_id); ?>" alt="">
+              <?= $term->name; ?>
+            </a>
           <?php endforeach; ?>
         </div>
       </div>
       <div class="col-9">
         <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane show active fade" id="v-pills-all" role="tabpanel" aria-labelledby="v-pills-all-tab">
+            <div class="row">
+              <?php 
+                $all = array(
+                  'post_type' => 'services',
+                );
+                $query_all = new WP_Query( $all );
+              ?>
+              <?php 
+                if ( $query_all->have_posts() ):
+                  while ( $query_all->have_posts() ):
+                    $query_all->the_post();
+                    $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+              ?>
+                <div class="col-md-4 col-12">
+                  <div class="card">
+                    <img src="<?= $featured_img_url; ?>" class="card-img-top" alt="<?= the_title(); ?>">
+                    <div class="card-body">
+                      <h5 class="card-title"><?= the_title(); ?></h5>
+                      <p class="card-text"><?=  wp_trim_words( get_the_content(), 5 ); ?></p>
+                    </div>
+                  </div>
+                </div>
+              <?php 
+                  endwhile; 
+                endif; 
+              wp_reset_postdata(); 
+              ?>
+            </div>
+           </div>
+
         <?php 
           $counter=0;
             foreach ($terms  as $term): 
             $counter++;
             ?>
-            <div class="tab-pane <?= ($counter == 1)? 'show active':''; ?> fade" id="v-pills-<?= $term->term_id; ?>" role="tabpanel" aria-labelledby="v-pills-<?= $term->term_id; ?>-tab">
+            <div class="tab-pane fade" id="v-pills-<?= $term->term_id; ?>" role="tabpanel" aria-labelledby="v-pills-<?= $term->term_id; ?>-tab">
             <div class="row">
 
             <?php 
@@ -143,7 +179,7 @@ $terms = get_terms( array(
                 <div class="card">
                   <img src="<?= $featured_img_url; ?>" class="card-img-top" alt="<?= the_title(); ?>">
                   <div class="card-body">
-                    <h5 class="card-title"><a href="<?= the_permalink(); ?>"><?= the_title(); ?></a></h5>
+                    <h5 class="card-title"><?= the_title(); ?></h5>
                     <p class="card-text"><?=  wp_trim_words( get_the_content(), 5 ); ?></p>
                   </div>
                 </div>

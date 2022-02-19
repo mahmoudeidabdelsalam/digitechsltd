@@ -51,7 +51,16 @@ if (!is_scalar($container_class) || empty($container_class)) {
           </ul>
         </div>
         <div class="col">
-          <serach></serach>
+            <ul class="button-action">
+              <li>
+                <img src="<?=get_theme_file_uri().'/assets/img/flag.png' ?>" alt="flag ar"> <span>عربي</span>
+              </li>
+              <li>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <i class="fa fa-search"></i>
+                </button>
+              </li>
+            </ul>
         </div>
       </div>
 
@@ -74,7 +83,7 @@ if (!is_scalar($container_class) || empty($container_class)) {
         </div>
 
         <div class="col">
-          <div class="row m-0">
+          <div class="row m-0 justify-content-end">
             <nav class="navbar navbar-expand-lg navbar-light">
               <div id="bootstrap-basic4-topnavbar" class="collapse navbar-collapse">
                 <?php 

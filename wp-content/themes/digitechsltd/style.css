@@ -40,12 +40,6 @@ Required WordPress CSS
   margin-left: 1.5em;
 }
 
-.bypostauthor {}
-
-
-/* WordPress gallery */
-.gallery-caption {}
-
 .gallery {
   margin-bottom: 1.6em;
 }
@@ -112,9 +106,6 @@ Required WordPress CSS
   display: none;
 }
 
-
-.sticky {}
-
 .wp-caption {
   border: 1px solid #ccc;
   margin-bottom: 1.5em;
@@ -171,9 +162,7 @@ Required WordPress CSS
   background: #4091CB;
 }
 
-
 @media (min-width: 1200px) {
-
   .container,
   .container-lg,
   .container-md,
@@ -185,7 +174,7 @@ Required WordPress CSS
 
 
 .main-navigation {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255);
   border-radius: 30px;
   padding: 5px 39px;
 }
@@ -193,7 +182,7 @@ Required WordPress CSS
 header.page-header ul.list-inline {
   padding: 14px 0;
   margin: 0;
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -233,7 +222,7 @@ div.carousel:after {
 }
 
 .carousel-caption h2 {
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -248,7 +237,7 @@ div.carousel:after {
   height: 60px;
   background: #37ABFF;
   border-radius: 30px;
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -413,7 +402,7 @@ section.contact-us p.contact-text {
 }
 
 section.services-us h3 {
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
@@ -426,7 +415,7 @@ section.services-us h3 {
 
 section.services-us .nav .nav-link {
   background: rgba(64, 145, 203, 0.2);
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-size: 20px;
   line-height: 37px;
@@ -440,7 +429,7 @@ section.services-us .nav .nav-link.active {
 }
 
 section.services-us img.card-img-top {
-  min-height: 250px;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -449,9 +438,9 @@ section.services-us .card-body {
   padding: 10px 19px;
 }
 
-section.services-us h5.card-title a {
+section.services-us h5.card-title {
   color: #fff;
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
@@ -571,7 +560,7 @@ section.slider-about .row {
 }
 
 section.slider-about h2 {
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -580,7 +569,7 @@ section.slider-about h2 {
 }
 
 section.slider-about p {
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -603,7 +592,7 @@ section.mission-vision img {
 }
 
 section.mission-vision h3 {
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: bold;
   font-size: 45px;
@@ -624,7 +613,7 @@ section.mission-vision h3::after {
 }
 
 section.mission-vision p {
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -639,7 +628,7 @@ section.mission-vision p {
 }
 
 .values-head h2 {
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -650,7 +639,7 @@ section.mission-vision p {
 }
 
 section.values-us h3 {
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -682,7 +671,7 @@ section.values-us p {
 }
 
 .team-head h2 {
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -693,7 +682,7 @@ section.values-us p {
 }
 
 section.team-us h3 {
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
@@ -727,7 +716,7 @@ section.team-us img.avatar {
 
 
 section.services-us-about .col-md-4 h3 {
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: bold;
   font-size: 45px;
@@ -754,7 +743,7 @@ section.services-us-about .col-md-4 h3 a {
 }
 
 section.services-us-about .col-md-4 p {
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -790,7 +779,7 @@ section.services-us-about .row:nth-child(odd) {
 }
 
 .info-box h3 a {
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -802,11 +791,160 @@ section.services-us-about .row:nth-child(odd) {
 }
 
 .info-box p {
-  font-family: Cairo;
+  font-family: 'Cairo';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 34px;
   color: #FFFFFF;
   z-index: 9;
+}
+
+.info-row {
+  display: flex;
+  margin: 40px 0 0;
+}
+
+.information-box {
+  width: 340px;
+  height: 300px;
+  background: #4091CB;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  margin-bottom: 40px;
+  margin-right: 41px;
+}
+
+.information-box h3 {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 67px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.information-box p {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-size: 22px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.information-box-row {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 60%;
+}
+
+.map-contact-us {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: -255px;
+  z-index: -1;
+}
+
+.map-contact-us iframe {
+  width: 720px;
+  height: 517px;
+}
+
+@media screen and (max-width: 769px) {
+  .information-box-row {
+      max-width: 100% !important;
+      width: 100% !important;
+      flex: 0 0 100%;
+  }
+  
+  .information-box {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .info-row {
+      flex-wrap: wrap;
+  }
+
+  .map-contact-us {
+      left: auto;
+      width: auto;
+      width: 100%;
+  }
+
+  .map-contact-us iframe {
+      width: 100%;
+  }
+}
+
+.information-box .social-media {
+  padding: 0;
+  margin: 0;
+}
+
+.information-box .social-media li img {
+  filter: brightness(0) invert(1);
+}
+
+.information-box .social-media li:hover img {
+  filter: none;
+}
+
+section.services-us .nav .nav-link img {
+  width: 30px;
+  margin-right: 18px;
+}
+
+section.services-us .nav .nav-link, 
+section.services-us .nav span {
+  border: 1px solid #4091CB;
+}
+
+h1.site-title-heading {
+  margin: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #4091CB !important;
+}
+
+ul.button-action {
+  list-style: none;
+  display: flex;
+  float: right;
+  margin: 0;
+  padding: 14px 0;
+}
+
+ul.button-action button {
+  background: transparent;
+  border: none;
+  padding: 0 10px;
+}
+
+ul.button-action li {
+  margin: 0 10px;
+}
+
+ul.button-action li span {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.gform_confirmation_message {
+  color: #fff;
+  text-align: center;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
 }
