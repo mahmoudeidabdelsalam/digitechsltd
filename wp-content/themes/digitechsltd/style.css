@@ -1,0 +1,812 @@
+/*
+Theme Name: Bootstrap Basic4
+Theme URI: http://rundiz.com
+Author: Vee Winch, christianoliff
+Author URI:
+Description: Bootstrap v.4 basic theme for developers to build their new theme very fast and easy. (WordPress 5 or Gutenberg ready.) The concept is to keep it basic, no rich features, no additional functions; all of these for theme developers will be easier to start develop their theme. To follow what was changed, please look for <a href="https://github.com/Rundiz-WP/bootstrap-basic4" target="commits">commits</a> of this theme at Github or changelog.md file that come with the theme. Please read notice on Bootstrap Basic 4 Help page in Dashboard &gt; Appearance &gt; Bootstrap Basic4 Help or in readme.txt file in this theme package.
+Version: 1.2.9
+Requires PHP: 5.5
+Requires at least: 5.0
+Tested up to: 5.8
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Text Domain: bootstrap-basic4
+Domain Path: /languages/
+Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, post-formats, threaded-comments, translation-ready, editor-style, blog
+
+This theme built with Twitter Bootstrap v.4. It is basic theme with basic style for build new theme with Bootstrap.
+
+*/
+
+
+/*
+Required WordPress CSS
+*/
+.aligncenter {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.bypostauthor {}
+
+
+/* WordPress gallery */
+.gallery-caption {}
+
+.gallery {
+  margin-bottom: 1.6em;
+}
+
+.gallery-item {
+  display: inline-block;
+  padding: 1.79104477%;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+.gallery-icon img {
+  margin: 0 auto;
+}
+
+.gallery-caption {
+  color: #707070;
+  color: rgba(51, 51, 51, 0.7);
+  display: block;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding: 0.5em 0;
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+  display: none;
+}
+
+
+.sticky {}
+
+.wp-caption {
+  border: 1px solid #ccc;
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 1.2% auto 0;
+  max-width: 98%;
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+
+.home {
+  background: #4091CB;
+}
+
+
+@media (min-width: 1200px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1350px;
+  }
+}
+
+
+.main-navigation {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 30px;
+  padding: 5px 39px;
+}
+
+header.page-header ul.list-inline {
+  padding: 14px 0;
+  margin: 0;
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  color: #FFFFFF;
+  display: flex;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+div.carousel {
+  margin-top: -170px;
+  position: relative;
+}
+
+header.page-header {
+  position: relative;
+  z-index: 99;
+}
+
+div.carousel:after {
+  content: "";
+  background: rgba(0, 110, 189, 0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption {
+  text-align: left !important;
+  top: 40%;
+}
+
+.carousel-caption h2 {
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.carousel-caption .readmore {
+  width: 200px;
+  height: 60px;
+  background: #37ABFF;
+  border-radius: 30px;
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 60px;
+  color: #FFFFFF;
+  text-align: center;
+  display: inline-block;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section.about-us {
+  background: #E5E5E5;
+  padding: 35px 0;
+}
+
+section.about-us h2 {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 120px;
+  letter-spacing: 0.1em;
+  color: #006EBD;
+  text-transform: capitalize;
+}
+
+section.about-us p {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 34px;
+  color: #37ABFF;
+}
+
+section.about-us h2 span {
+  font-size: 96px;
+  line-height: 180px;
+  letter-spacing: 0.1em;
+  position: absolute;
+  top: -65px;
+  font-family: 'Cairo';
+  font-weight: bold;
+  opacity: .1;
+}
+
+section.counter-us {
+  padding: 74px 0;
+}
+
+section.counter-us .box-counter span {
+  color: #fff;
+  display: block;
+  text-align: center;
+}
+
+section.counter-us .box-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.box-counter .counter {
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.box-counter .text {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 52px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+section.services-us {
+  background: #E5E5E5;
+  padding: 39px 0 15px;
+}
+
+
+section.services-us h2 {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 120px;
+  color: #006EBD;
+  text-align: center;
+  width: 100%;
+}
+
+section.services-us p.services-text {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #37ABFF;
+  width: 50%;
+  margin: auto;
+}
+
+
+section.contact-us {
+  background: #006EBD;
+  padding: 39px 0 15px;
+}
+
+
+section.contact-us h2 {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 120px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+section.contact-us p.contact-text {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  width: 50%;
+  margin: auto;
+}
+
+section.services-us h3 {
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 41px;
+  display: flex;
+  align-items: center;
+  color: #4091CB;
+  margin-bottom: 25px;
+}
+
+section.services-us .nav .nav-link {
+  background: rgba(64, 145, 203, 0.2);
+  font-family: Cairo;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 37px;
+  color: #4091CB;
+  padding: 5px 35px;
+}
+
+section.services-us .nav .nav-link.active {
+  background: rgba(64, 145, 203, 0.4);
+  font-weight: bold;
+}
+
+section.services-us img.card-img-top {
+  min-height: 250px;
+  object-fit: cover;
+}
+
+section.services-us .card-body {
+  background: #006EBD;
+  padding: 10px 19px;
+}
+
+section.services-us h5.card-title a {
+  color: #fff;
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 41px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+section.services-us h5.card-title {
+  margin: 0;
+}
+
+section.services-us .card-body p {
+  color: #fff;
+}
+
+
+.gform_wrapper ul.gform_fields li.gfield label.gfield_label {
+  display: none;
+}
+
+.gform_wrapper .gform_body input,
+.gform_wrapper .gform_body textarea {
+  background: #FFFFFF;
+  border-radius: 10px;
+  min-height: 60px;
+  border: none;
+  font-family: 'Cairo' !important;
+  font-size: 18px !important;
+  line-height: 34px;
+  color: #CCCCCC;
+  padding: 10px 30px !important;
+  width: 100% !important;
+}
+
+.gform_wrapper ul.gform_fields li.gfield {
+  padding: 0;
+}
+
+.gform_wrapper {
+  margin: 56px 0;
+}
+
+.gform_wrapper .gform_footer input.button {
+  background: #37ABFF;
+  border-radius: 30px;
+  min-height: 60px;
+  width: 200px !important;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  margin: auto !important;
+  display: block !important;
+}
+
+footer p {
+  margin: 0;
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 34px;
+  text-align: center;
+  color: #000000;
+}
+
+
+@media (min-width: 1200px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1350px !important;
+  }
+}
+
+section.services-us .card {
+  margin-bottom: 38px;
+}
+
+section.services-us .nav span {
+  background: rgba(64, 145, 203, 0.2);
+  padding: 15px 35px;
+}
+
+section.services-us .nav a {
+  border-radius: 0 !important;
+}
+
+section.slider-about {
+  height: 500px;
+  margin-top: -170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+section.slider-about::after {
+  content: "";
+  background: rgba(0, 110, 189, 0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section.slider-about .row {
+  position: relative;
+  z-index: 9;
+}
+
+section.slider-about h2 {
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 50px;
+  color: #FFFFFF;
+}
+
+section.slider-about p {
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 34px;
+  color: #fff;
+}
+
+section.slider-about {
+  padding-top: 120px;
+}
+
+section.mission-vision img {
+  margin: 35px 0;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+section.mission-vision img {
+  margin: 35px 0;
+}
+
+section.mission-vision h3 {
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 116%;
+  text-transform: capitalize;
+  color: #006EBD;
+}
+
+section.mission-vision h3::after {
+  content: "";
+  width: 89px;
+  height: 4px;
+  background: #006EBD;
+  border-radius: 22px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 26px;
+}
+
+section.mission-vision p {
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 34px;
+  color: #006EBD;
+}
+
+.values-head {
+  padding: 90px;
+  background-image: url('assets/img/bg-aboutus.png');
+  position: relative;
+}
+
+.values-head h2 {
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 50px;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 10;
+}
+
+section.values-us h3 {
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 116%;
+  color: #006EBD;
+}
+
+section.values-us p {
+  color: #006EBD;
+  padding: 0 175px 0 0;
+}
+
+.values-head::after {
+  content: "";
+  background: rgba(0, 110, 189, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+
+
+.team-head {
+  padding: 90px;
+  background-image: url('assets/img/bg-aboutus.png');
+  position: relative;
+}
+
+.team-head h2 {
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 50px;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 10;
+}
+
+section.team-us h3 {
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 116%;
+  color: #006EBD;
+}
+
+section.team-us p {
+  color: #006EBD;
+}
+
+.team-head::after {
+  content: "";
+  background: rgba(0, 110, 189, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+
+section.team-us img.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin: 29px auto 20px;
+  display: block;
+}
+
+
+section.services-us-about .col-md-4 h3 {
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 116%;
+  text-transform: capitalize;
+  color: #006EBD;
+  padding-right: 40px;
+}
+
+
+section.services-us-about .col-md-4 h3::after {
+  content: "";
+  width: 89px;
+  height: 4px;
+  background: #006EBD;
+  border-radius: 22px;
+  display: block;
+  margin-bottom: 26px;
+}
+
+
+section.services-us-about .col-md-4 h3 a {
+  margin-right: auto;
+}
+
+section.services-us-about .col-md-4 p {
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 34px;
+  color: #006EBD;
+}
+
+section.services-us-about .row:nth-child(odd) {
+  flex-flow: row-reverse;
+}
+
+
+.info-box::after {
+  content: "";
+  background: linear-gradient(180deg, rgba(55, 171, 255, 0) 0%, #37ABFF 99.79%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+
+.info-box {
+  position: relative;
+  height: 400px;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: column;
+  padding: 0 70px;
+  margin: 45px 0;
+}
+
+.info-box h3 a {
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 116%;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  z-index: 9;
+  position: relative;
+}
+
+.info-box p {
+  font-family: Cairo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 34px;
+  color: #FFFFFF;
+  z-index: 9;
+}
